@@ -498,7 +498,7 @@ extension PlayerVC {
     }
 
     private func setupPlayer() {
-        let urlString = channels[currentIndex].url.absoluteString.replacingSuffix(of: ".ts", with: ".m3u8")
+        let urlString = channels[currentIndex].url.absoluteString.replacingSuffixIfCan(of: ".ts", with: ".m3u8")
         guard let url = URL(string: urlString) else {
             proccessError()
             return
