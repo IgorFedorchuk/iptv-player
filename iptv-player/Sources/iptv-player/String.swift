@@ -12,7 +12,7 @@ extension String {
         return NSLocalizedString(self, comment: "")
     }
 
-    func replacingSuffix(of pattern: String, with replacement: String) -> String {
+    func replacingSuffixIfCan(of pattern: String, with replacement: String) -> String {
         guard let range = range(of: pattern + "$", options: .regularExpression) else {
             return self
         }
