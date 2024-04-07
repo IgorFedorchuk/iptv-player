@@ -18,25 +18,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FsW-vv-NsZ">
-                                <rect key="frame" x="161.66666666666666" y="408.66666666666669" width="69.666666666666657" height="35"/>
+                                <rect key="frame" x="143.66666666666666" y="408.66666666666669" width="105.66666666666666" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Link 2"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Play Link 2"/>
                                 <connections>
                                     <action selector="link2Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="22D-6G-gJ9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kEo-9h-3ua">
-                                <rect key="frame" x="162.66666666666666" y="353.66666666666669" width="68" height="35"/>
+                                <rect key="frame" x="145" y="353.66666666666669" width="103.33333333333331" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Link 1"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Play Link 1"/>
                                 <connections>
                                     <action selector="link1Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IP5-qw-kaM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7pg-i5-fQN">
-                                <rect key="frame" x="161.66666666666666" y="463.66666666666669" width="70" height="35"/>
+                                <rect key="frame" x="143.66666666666666" y="463.66666666666669" width="106" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Link 3"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Play Link 3"/>
                                 <connections>
                                     <action selector="link3Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vtM-mA-sSz"/>
                                 </connections>

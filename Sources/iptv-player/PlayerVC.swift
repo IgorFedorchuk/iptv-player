@@ -146,6 +146,7 @@ open class PlayerVC: UIViewController {
     open var errorText = ""
     open var needCloseOnPipPressed = false
 
+    public var onViewDidLoad: (() -> Void)?
     public var onError: ((URL, Error?) -> Void)?
     public var onPipStarted: ((PipModel, [PlayerVC.Channel], Int) -> Void)?
 
@@ -189,6 +190,7 @@ open class PlayerVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor.black
         setupControls()
+        onViewDidLoad?()
     }
 
     override open func viewDidLayoutSubviews() {
