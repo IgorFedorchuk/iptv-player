@@ -21,6 +21,9 @@
 		774DCBD92BC295B900A50D7C /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774DCBD02BC295B900A50D7C /* UIColor.swift */; };
 		774DCBDA2BC295B900A50D7C /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774DCBD12BC295B900A50D7C /* UIImage.swift */; };
 		774DCBDB2BC295B900A50D7C /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774DCBD22BC295B900A50D7C /* UIView.swift */; };
+		774DCBDF2BC29AF800A50D7C /* PipService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774DCBDE2BC29AF800A50D7C /* PipService.swift */; };
+		774DCBE12BC29B6700A50D7C /* PlayerVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774DCBE02BC29B6700A50D7C /* PlayerVCExtension.swift */; };
+		774DCBE32BC29BDD00A50D7C /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774DCBE22BC29BDD00A50D7C /* UIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		774DCBD02BC295B900A50D7C /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		774DCBD12BC295B900A50D7C /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		774DCBD22BC295B900A50D7C /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		774DCBDE2BC29AF800A50D7C /* PipService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipService.swift; sourceTree = "<group>"; };
+		774DCBE02BC29B6700A50D7C /* PlayerVCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerVCExtension.swift; sourceTree = "<group>"; };
+		774DCBE22BC29BDD00A50D7C /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +82,9 @@
 				774DCBB62BC294EB00A50D7C /* AppDelegate.swift */,
 				774DCBB82BC294EB00A50D7C /* SceneDelegate.swift */,
 				774DCBBA2BC294EB00A50D7C /* ViewController.swift */,
+				774DCBDE2BC29AF800A50D7C /* PipService.swift */,
+				774DCBE02BC29B6700A50D7C /* PlayerVCExtension.swift */,
+				774DCBE22BC29BDD00A50D7C /* UIViewController.swift */,
 				774DCBBC2BC294EB00A50D7C /* Main.storyboard */,
 				774DCBBF2BC294EB00A50D7C /* Assets.xcassets */,
 				774DCBC12BC294EB00A50D7C /* LaunchScreen.storyboard */,
@@ -185,6 +194,9 @@
 				774DCBD52BC295B900A50D7C /* Bundle.swift in Sources */,
 				774DCBD62BC295B900A50D7C /* PipModel.swift in Sources */,
 				774DCBD72BC295B900A50D7C /* PlayerVC.swift in Sources */,
+				774DCBE12BC29B6700A50D7C /* PlayerVCExtension.swift in Sources */,
+				774DCBDF2BC29AF800A50D7C /* PipService.swift in Sources */,
+				774DCBE32BC29BDD00A50D7C /* UIViewController.swift in Sources */,
 				774DCBD82BC295B900A50D7C /* String.swift in Sources */,
 				774DCBD92BC295B900A50D7C /* UIColor.swift in Sources */,
 				774DCBDA2BC295B900A50D7C /* UIImage.swift in Sources */,

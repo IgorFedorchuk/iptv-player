@@ -32,21 +32,11 @@ class ViewController: UIViewController {
     }
     
     private func show(channels: [PlayerVC.Channel], currentIndex: Int, pipModel: PipModel?) {
-        let playerVC = PlayerVC(channels: channels, currentIndex: currentIndex, pipModel: pipModel)
-        playerVC.modalPresentationStyle = .overFullScreen
-        playerVC.needCloseOnPipPressed = true
-        playerVC.onError = { url, error in
-            let link = url.absoluteString
-            let errorString = String(describing: error)
-            #if DEBUG
-                print("Player error:\(errorString)")
-                print(link)
-            #endif
+        if PipService.shared.playIfInPipMode(url: channels[currentIndex].url, channels: (channels, currentIndex)) {
+            return
         }
-        playerVC.onPipStarted = { pipModel, channels, currentIndex in
-        }
-        playerVC.errorText = "Video is unreachable".localized
-        show(playerVC, sender: nil)
+        let playerVC = PlayerVC.create(channels: channels, currentIndex: currentIndex, pipModel: pipModel)
+        present(playerVC, animated: true)
     }
 
 }
