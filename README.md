@@ -13,9 +13,11 @@ iPhone/iPad
 - show name of channel
 - changing system brightness
 - changing system volume
+- lock rotation
+- pause timer
   
 # Screenshot
-![Simulator Screenshot - iPad Pro (12 9-inch) (2nd generation) - 2024-05-02 at 09 58 52](https://github.com/IgorFedorchuk/iptv-player/assets/2764603/43bf8936-719b-48be-bc7a-5523030f4040)
+![Simulator Screenshot - iPad Pro (12 9-inch) (6th generation) - 2024-05-12 at 14 41 15](https://github.com/IgorFedorchuk/iptv-player/assets/2764603/df6e382f-1d22-4858-8d6a-7d98b930497c)
 
 
 # How to use
@@ -26,7 +28,6 @@ var channels: [PlayerVC.Channel] =
                 PlayerVC.Channel(url: URL(string: "http://hls1.webcamera.pl/krakowsan_cam_480f1a/krakowsan_cam_480f1a.stream/chunks.m3u8")!, name: "Channel 2"),
                 PlayerVC.Channel(url: URL(string: "https://live-par-2-cdn-alt.livepush.io/live/bigbuckbunnyclip/index.m3u8")!, name: "Channel 3")]
                 
-PlayerVC.Constant.hideControlsTimeInterval = 5
 let playerVC = PlayerVC(channels: channels, currentIndex: 0, pipModel: nil)
 playerVC.modalPresentationStyle = .overFullScreen
 playerVC.onViewDidLoad = {}
@@ -34,6 +35,6 @@ playerVC.onError = { url, error in
 }
 playerVC.onPipStarted = { pipModel, channels, currentIndex in
 }
-playerVC.errorText = NSLocalizedString("Video is unreachable", comment: "")
+playerVC.constant.errorText = NSLocalizedString("Video is unreachable", comment: "")
 present(playerVC, animated: true)
 ```
