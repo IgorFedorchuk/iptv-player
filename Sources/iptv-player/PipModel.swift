@@ -12,4 +12,5 @@ import Foundation
 public struct PipModel {
     public private(set) var pipController: AVPictureInPictureController
     public private(set) var player: AVPlayer
+    public var pauseTimeInterval: TimeInterval?
 }
