@@ -221,7 +221,6 @@ open class PlayerVC: UIViewController {
     }()
 
     open var needCloseOnPipPressed = false
-    open var useVLCPlayer = true
     open var needShowFavoriteButton = false
     open var isRotationLocked = false
     open var lockedOrientations = UIInterfaceOrientationMask.allButUpsideDown
@@ -237,7 +236,6 @@ open class PlayerVC: UIViewController {
 
     private var isFullScreenMode = false
     private var isPlayControlHidden = false
-    private var isAvPlayerStoppedWithError = false
 
     private var playerItem: AVPlayerItem?
     private var player: AVPlayer?
@@ -348,21 +346,13 @@ open class PlayerVC: UIViewController {
                 guard let self else { return }
                 if newStatus == .playing || newStatus == .paused {
                     loader.stopAnimating()
-                    if newStatus == .playing && playerLayer?.videoRect == CGRectZero && useVLCPlayer {
-                        isAvPlayerStoppedWithError = true
-                        setupPlayer()
-                    }
                 } else {
                     loader.startAnimating()
                 }
             }
         } else if let playerItem = object as? AVPlayerItem, keyPath == #keyPath(AVPlayerItem.status), playerItem.status == .failed {
-            if useVLCPlayer {
-                isAvPlayerStoppedWithError = true
-                setupPlayer()
-            } else {
-                proccessError()
-            }
+            loader.stopAnimating()
+            proccessError()
         } else if keyPath == #keyPath(AVAudioSession.outputVolume) {
             updateBrighnessAndVolume()
         }
@@ -735,7 +725,6 @@ extension PlayerVC {
         let nextIndex = currentIndex + 1
         if nextIndex < channels.count {
             currentIndex = nextIndex
-            isAvPlayerStoppedWithError = false
             setupPlayer()
             setFavoriteButtonColor(channels[currentIndex].isFavorite)
         }
@@ -748,7 +737,6 @@ extension PlayerVC {
         let nextIndex = currentIndex - 1
         if nextIndex >= 0, nextIndex < channels.count {
             currentIndex = nextIndex
-            isAvPlayerStoppedWithError = false
             setupPlayer()
             setFavoriteButtonColor(channels[currentIndex].isFavorite)
         }
