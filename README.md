@@ -19,14 +19,13 @@ iPhone/iPad
 # Screenshot
 ![Simulator Screenshot - iPad Pro (12 9-inch) (6th generation) - 2024-05-12 at 14 41 15](https://github.com/IgorFedorchuk/iptv-player/assets/2764603/df6e382f-1d22-4858-8d6a-7d98b930497c)
 
-
 # How to use
 For clearer comprehension, please open the project located in the "Example" folder.
 ```
 var channels: [PlayerVC.Channel] =
-                [PlayerVC.Channel(url: URL(string: "https://classicarts.akamaized.net/hls/live/1024257/CAS/master.m3u8")!, name: "Channel 1"),
-                PlayerVC.Channel(url: URL(string: "http://hls1.webcamera.pl/krakowsan_cam_480f1a/krakowsan_cam_480f1a.stream/chunks.m3u8")!, name: "Channel 2"),
-                PlayerVC.Channel(url: URL(string: "https://live-par-2-cdn-alt.livepush.io/live/bigbuckbunnyclip/index.m3u8")!, name: "Channel 3")]
+                [PlayerVC.Channel(url: URL(string: "http://hls1.webcamera.pl/krakowsan_cam_480f1a/krakowsan_cam_480f1a.stream/chunks.m3u8")!, name: "Channel 1", id: "1", isFavorite: false),
+                PlayerVC.Channel(url: URL(string: "https://classicarts.akamaized.net/hls/live/1024257/CAS/master.m3u8")!, name: "Channel 2", id: "2", isFavorite: false),
+                PlayerVC.Channel(url: URL(string: "https://live-par-2-cdn-alt.livepush.io/live/bigbuckbunnyclip/index.m3u8")!, name: "Channel 3", id: "3", isFavorite: false)]
                 
 let playerVC = PlayerVC(channels: channels, currentIndex: 0, pipModel: nil)
 playerVC.modalPresentationStyle = .overFullScreen
