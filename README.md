@@ -4,7 +4,7 @@ Xcode 15.0+
 iPhone/iPad
 
 # Install via Swift Package Manager
-You can use Swift Package Manager to add vlc-player to your Xcode project. Select File » Add Packages Dependencies... and enter the repository URL https://github.com/IgorFedorchuk/iptv-player.git into the search bar (top right). Set the Dependency Rule to Up to next major, and the version number to 2.0.0 < 3.0.0.
+You can use Swift Package Manager to add iptv-player to your Xcode project. Select File » Add Packages Dependencies... and enter the repository URL https://github.com/IgorFedorchuk/iptv-player.git into the search bar (top right). Set the Dependency Rule to Up to next major, and the version number to 2.0.0 < 3.0.0.
 
 # Features
 - picture in picture mode
